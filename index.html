@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,14 +11,15 @@
             overflow: hidden; /* スクロールを無効化 */
             display: flex;
             flex-direction: column;
+            justify-content: flex-end;
             align-items: center;
+            height: 100vh; /* 画面全体を使う */
         }
         #controls {
-            position: absolute;
-            top: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 10px; /* 画面下から少し余白を持たせる */
         }
         #controls button {
             margin: 5px;
