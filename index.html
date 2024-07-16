@@ -17,15 +17,17 @@
         }
         #controls {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px; /* 画面下から少し余白を持たせる */
+            flex-wrap: wrap; /* ボタンが画面幅を超える場合に折り返す */
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); /* 半透明の背景色を追加 */
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
         }
         #controls button {
             margin: 5px;
-        }
-        .row {
-            display: flex;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -42,30 +44,18 @@
     </a-scene>
     
     <div id="controls">
-        <div class="row">
-            <button id="moveUp">↑</button>
-        </div>
-        <div class="row">
-            <button id="moveLeft">←</button>
-            <button id="moveDown">↓</button>
-            <button id="moveRight">→</button>
-        </div>
-        <div class="row">
-            <button id="moveForward">前進</button>
-            <button id="moveBackward">後退</button>
-        </div>
-        <div class="row">
-            <button id="scaleUp">拡大</button>
-            <button id="scaleDown">縮小</button>
-        </div>
-        <div class="row">
-            <button id="rotateX">回転X軸</button>
-            <button id="rotateY">回転Y軸</button>
-            <button id="rotateZ">回転Z軸</button>
-        </div>
-        <div class="row">
-            <button id="reset">初期位置・向きへ戻す</button>
-        </div>
+        <button id="moveUp">↑</button>
+        <button id="moveDown">↓</button>
+        <button id="moveLeft">←</button>
+        <button id="moveRight">→</button>
+        <button id="moveForward">前進</button>
+        <button id="moveBackward">後退</button>
+        <button id="scaleUp">拡大</button>
+        <button id="scaleDown">縮小</button>
+        <button id="rotateX">回転X軸</button>
+        <button id="rotateY">回転Y軸</button>
+        <button id="rotateZ">回転Z軸</button>
+        <button id="reset">初期位置・向きへ戻す</button>
     </div>
     
     <script>
